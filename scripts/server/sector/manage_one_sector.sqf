@@ -264,12 +264,17 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
                         deleteVehicle _x;
                     };
                 } else {
-                    if (!isNull _x) then {
+                    // Storm's edit: check if vehicle is dead. Only then do we remove it.
+                    //This can result in weirdness wherein vehicles get lost in the woods or arma'd
+                    //however these can happen anyway and so a server restart would be more sensible then
+                    //coding around each of these edge cases
+                    if (!isNull _x && !alive _x) then {
                         [_x] call KPLIB_fnc_cleanOpforVehicle;
                     };
                 };
             } forEach _managed_units;
         } else {
+            //this code manages despawning after friendly units leave the area.
             if (([_sectorpos, (([_opforcount] call KPLIB_fnc_getSectorRange) + 300), GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount) == 0) then {
                 _sector_despawn_tickets = _sector_despawn_tickets - 1;
             } else {

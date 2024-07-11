@@ -32,6 +32,10 @@ switch (true) do {
 };
 
 combat_readiness = combat_readiness + _combat_readiness_increase;
+//storm's edit: making a condition wherein if a bigtown or military sector is owned
+// and if combat readiness below 30, set to 30. This creates a minimum of 30 readiness
+// if a bigtown or military sector is owned
+if ((_liberated_sector in sectors_bigtown || _liberated_sector in sectors_military) && combat_readiness < 30) then {combat_readiness = 30.0};
 if (combat_readiness > 100.0 && GRLIB_difficulty_modifier <= 2.0) then {combat_readiness = 100.0};
 stats_readiness_earned = stats_readiness_earned + _combat_readiness_increase;
 

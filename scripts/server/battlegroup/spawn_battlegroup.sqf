@@ -84,7 +84,32 @@ if !(_spawn_marker isEqualTo "") then {
 
     sleep 3;
 
-    combat_readiness = (combat_readiness - (round ((count _bg_groups) + (random (count _bg_groups))))) max 0;
+    //make AI go into aggressive state and refuse to let readiness drop below 30% once
+    // a bigtown or military base is taken
+    // totalWar is the flag for setting minimum readiness to 30
+    totalWar = false;
+
+    {
+        if (_x in sectors_bigtown or _x in sectors_military) exitwith {
+            totalWar = true;
+        };
+        
+    } forEach blufor_sectors;
+
+
+    if (totalWar == true) then {
+        combat_readiness = (combat_readiness - (round ((count _bg_groups) + (random (count _bg_groups))))) max 0;
+        //after calculating, set combat readiness to 30 if below
+        // this occurs if a battlegroup spawns. See sector_liberated_remote_call for the check
+        // when a sector is liberated
+        if (combat_readiness < 30) then {
+            combat_readiness = 30;
+        };
+    } else {
+        //if player doesn't own a big town or military sector then do not apply minimum
+        combat_readiness = (combat_readiness - (round ((count _bg_groups) + (random (count _bg_groups))))) max 0;
+    };
+
     stats_hostile_battlegroups = stats_hostile_battlegroups + 1;
 
     {

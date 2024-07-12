@@ -91,6 +91,11 @@ if (((random 100) >= 50) && !(KP_liberation_guerilla_vehicles isEqualTo [])) the
     [_vehicle] call KPLIB_fnc_allowCrewInImmobile;
 
     private _grp = [_startpos, 2] call KPLIB_fnc_spawnGuerillaGroup;
+
+    //assign as driver and gunner then move them in
+    ((units _grp) select 0) assignAsDriver _vehicle;
+    ((units _grp) select 1) assignAsGunner _vehicle;
+
     ((units _grp) select 0) moveInDriver _vehicle;
     ((units _grp) select 1) moveInGunner _vehicle;
 

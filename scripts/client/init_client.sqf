@@ -38,6 +38,8 @@ write_credit_line = compileFinal preprocessFileLineNumbers "scripts\client\ui\wr
 do_load_box = compileFinal preprocessFileLineNumbers "scripts\client\ammoboxes\do_load_box.sqf";
 kp_fuel_consumption = compileFinal preprocessFileLineNumbers "scripts\client\misc\kp_fuel_consumption.sqf";
 kp_vehicle_permissions = compileFinal preprocessFileLineNumbers "scripts\client\misc\vehicle_permissions.sqf";
+KPLIB_fnc_setVehicleSeized = compileFinal preprocessFileLineNumbers "functions\fn_setVehicleSeized.sqf";
+KPLIB_fnc_setVehicleCaptured = compileFinal preprocessFileLineNumbers "functions\fn_setVehicleCaptured.sqf";
 
 execVM "scripts\client\actions\intel_manager.sqf";
 execVM "scripts\client\actions\recycle_manager.sqf";
@@ -66,13 +68,15 @@ execVM "scripts\client\ui\ui_manager.sqf";
 execVM "scripts\client\ui\tutorial_manager.sqf";
 execVM "scripts\client\markers\update_production_sites.sqf";
 
+
 player addMPEventHandler ["MPKilled", {_this spawn kill_manager;}];
 player addEventHandler ["GetInMan", {[_this select 2] spawn kp_fuel_consumption;}];
-player addEventHandler ["GetInMan", {[_this select 2] call KPLIB_fnc_setVehiclesSeized;}];
+player addEventHandler ["GetInMan", {[_this select 2] call KPLIB_fnc_setVehicleSeized;}];
 player addEventHandler ["GetInMan", {[_this select 2] call KPLIB_fnc_setVehicleCaptured;}];
 player addEventHandler ["GetInMan", {[_this select 2] call kp_vehicle_permissions;}];
 player addEventHandler ["SeatSwitchedMan", {[_this select 2] call kp_vehicle_permissions;}];
 player addEventHandler ["HandleRating", {if ((_this select 1) < 0) then {0};}];
+
 
 // Disable stamina, if selected in parameter
 if (!GRLIB_fatigue) then {

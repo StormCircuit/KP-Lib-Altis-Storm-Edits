@@ -83,7 +83,9 @@ _spawnedGroups pushBack _grp;
 
 sleep 10;
 
-if (((random 100) >= 50) && !(KP_liberation_guerilla_vehicles isEqualTo [])) then {
+//storm's edit: added check for tier 3 resistance to make vehicle spawns more sensible
+// 'if (1 in 2 chance) and resistance tier 3 and guerilla vic array not empty'
+if (((random 100) >= 50) && [] call KPLIB_fnc_getResistanceTier >= 3 &&!(KP_liberation_guerilla_vehicles isEqualTo [])) then {
     private _vehicle = (selectRandom KP_liberation_guerilla_vehicles) createVehicle _startpos;
     
     //hint str (_vehicle);

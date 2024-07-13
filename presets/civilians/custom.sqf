@@ -48,7 +48,6 @@ civilian_vehicles = [
     "C_Truck_02_fuel_F",
     "C_Truck_02_transport_F",
     "C_Truck_02_covered_F",
-    "C_Kart_01_F",
     "C_Kart_01_Blu_F",
     "C_Kart_01_Fuel_F",
     "C_Kart_01_Red_F",

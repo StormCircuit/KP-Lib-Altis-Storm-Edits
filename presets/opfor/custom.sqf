@@ -6,8 +6,8 @@
 opfor_officer = "rhs_msv_emr_officer";                                  // Officer
 opfor_squad_leader = "rhs_msv_emr_sergeant";                            // Squad Leader
 opfor_team_leader = "rhs_msv_emr_efreitor";                             // Team Leader
-opfor_sentry = "rhs_msv_emr_rifleman";                                  // Rifleman (Lite)
-opfor_rifleman = "rhs_msv_emr_rifleman";                                // Rifleman
+opfor_sentry = "rhs_msv_emr_LAT";                                       // Rifleman (LAT)
+opfor_rifleman = "rhs_msv_emr_LAT";                                     // Rifleman (LAT)
 opfor_rpg = "rhs_msv_emr_LAT";                                          // Rifleman (LAT)
 opfor_grenadier = "rhs_msv_emr_grenadier";                              // Grenadier
 opfor_machinegunner = "rhs_msv_emr_arifleman";                          // Autorifleman

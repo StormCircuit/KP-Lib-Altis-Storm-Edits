@@ -79,9 +79,9 @@ infantry_units = [
 ];
 
 light_vehicles = [
-    ["C_Kart_01_F",0,0,0],                                        		// Go kart added by Storm
-    ["B_Quadbike_01_F",0,0,0],                                        	// Quad Bike modified by Storm
-	["US85_M1030",5,0,5],												// CSLA Motorcycle added by Storm
+    ["C_Kart_01_F",0,0,0],                                        		// Pity kart added by Storm
+	["US85_M1030",5,0,5],												// CSLA Motorcycle added by Storm    
+    ["B_Quadbike_01_F",10,0,10],                                        // Quad Bike modified by Storm
     ["B_LSV_01_unarmed_F",20,0,10],                                     // Prowler
     ["B_LSV_01_AT_F",75,60,50],                                         // Prowler (AT)
     ["B_ION_APC_Wheeled_02_hmg_lxWS",200,20,50],                        // Marid M2 by Storm from WS

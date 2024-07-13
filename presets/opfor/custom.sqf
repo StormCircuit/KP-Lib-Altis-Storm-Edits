@@ -5,7 +5,7 @@
 // Enemy infantry classes
 opfor_officer = "rhs_msv_emr_officer";                                  // Officer
 opfor_squad_leader = "rhs_msv_emr_sergeant";                            // Squad Leader
-opfor_team_leader = "rhs_msv_emr_efreitor";                             // Team Leader
+opfor_team_leader = "rhs_msv_emr_LAT";                                  // Rifleman (LAT)
 opfor_sentry = "rhs_msv_emr_LAT";                                       // Rifleman (LAT)
 opfor_rifleman = "rhs_msv_emr_LAT";                                     // Rifleman (LAT)
 opfor_rpg = "rhs_msv_emr_LAT";                                          // Rifleman (LAT)
@@ -18,7 +18,7 @@ opfor_sniper = "rhs_msv_emr_marksman";                                  // Snipe
 opfor_at = "rhs_msv_emr_at";                                            // AT Specialist
 opfor_aa = "rhs_msv_emr_aa";                                            // AA Specialist
 opfor_medic = "rhs_msv_emr_medic";                                      // Combat Life Saver
-opfor_engineer = "rhs_msv_emr_engineer";                                // Engineer
+opfor_engineer = "rhs_msv_emr_at";                                      // AT Specialist
 opfor_paratrooper = "rhs_msv_emr_RShG2";                                // Paratrooper
 
 // Enemy vehicles used by secondary objectives.
@@ -50,34 +50,33 @@ militia_squad = [
     "rhs_msv_emr_engineer"                                              // Engineer
 ];
 
-// Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector
+// Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders
 militia_vehicles = [
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
-    "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
-    "O_UGV_01_rcws_F"                                                 	// ugv saif
+    "rhs_btr80a_vdv",                                                   // RHS BTR-80a
+    "O_UGV_01_rcws_F",                                                 	// ugv saif
+    "O_Heli_Light_02_dynamicLoadout_F"                                  // CSAT Kasatka
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
-// this is for high intensity (alert) (verify this)
-// edited by storm to not have lightweight vehicles because the AI are easy as shit to outsmart
+// spawns when readiness above 40
 opfor_vehicles = [
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
     "rhs_sprut_vdv",                                                 	// sprut tank destroyer
     "rhs_t90sm_tv",                                                    	// T90SM
-    "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
-    "O_UGV_01_rcws_F"                                                 	// ugv saif
+    "rhs_btr80a_vdv",                                                   // RHS BTR-80a
+    "O_UGV_01_rcws_F",                                                 	// ugv saif
+    "O_Heli_Attack_02_dynamicLoadout_F"                                 // Mi-48 Kajman
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
-// low intensity (as it says)
+// spawns when combat readiness below 40
 opfor_vehicles_low_intensity = [
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
-    "O_APC_Tracked_02_30mm_lxWS",                                       // BTR-T Iksatel from WS    
-    "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
-    "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
-    "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
+    "rhs_bmd2m",                                                        // RHS bmd2m
+    "rhs_btr80a_vdv",                                                   // RHS BTR-80a
     "O_UGV_01_rcws_F",                                                 	// ugv saif
     "O_UGV_01_rcws_F",                                                 	// ugv saif
     "O_Heli_Attack_02_dynamicLoadout_F"                                 // Mi-48 Kajman
@@ -87,9 +86,9 @@ opfor_vehicles_low_intensity = [
 opfor_battlegroup_vehicles = [
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
-    "O_APC_Tracked_02_30mm_lxWS",                                       // BTR-T Iksatel from WS
+    "rhs_bmd2m",                                                        // RHS bmd2m   
     "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
-    "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
+    "rhs_btr80a_vdv",                                                   // RHS BTR-80a
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
     "rhs_t90sm_tv",                                                    	// T90SM
     "O_MBT_04_command_F",                                               // T-140K Angara
@@ -105,7 +104,7 @@ opfor_battlegroup_vehicles_low_intensity = [
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
     "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
-    "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
+    "rhs_btr80a_vdv",                                                   // RHS BTR-80a
     "rhs_sprut_vdv",                                                 	// sprut tank destroyer
     "O_UGV_01_rcws_F",                                                 	// ugv saif
     "O_Heli_Attack_02_dynamicLoadout_F"                                 // Mi-48 Kajman
@@ -115,13 +114,15 @@ opfor_battlegroup_vehicles_low_intensity = [
 If something in this array can't hold all 8 soldiers then buggy behaviours may occur.    */
 
 opfor_troup_transports = [
-    "O_Heli_Attack_02_dynamicLoadout_F",                                 // Mi-48 Kajman
-    "O_Truck_03_covered_F",                                              // Tempest Transport (Covered)
-    "O_APC_Wheeled_02_rcws_F"                                            // MSE-3 Marid
+    "O_Heli_Light_02_dynamicLoadout_F",                                 // CSAT Kasatka
+    "O_Heli_Attack_02_dynamicLoadout_F",                                // Mi-48 Kajman
+    "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
+    "rhs_btr80a_vdv"                                                   // RHS BTR-80a
 ];
 
 // Enemy rotary-wings that will need to spawn in flight.
 opfor_choppers = [
+    "O_Heli_Light_02_dynamicLoadout_F",                                 // CSAT Kasatka    
     "RHS_Ka52_vvsc",                                                    // Ka-52
     "O_Heli_Attack_02_dynamicLoadout_F"                                 // Mi-48 Kajman
 ];

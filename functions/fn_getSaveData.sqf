@@ -36,7 +36,7 @@ private ["_fobPos", "_fobObjects", "_grpUnits", "_fobMines"];
 {
     _fobPos = _x;
     _fobObjects = (_fobPos nearObjects (GRLIB_fob_range * 1.2)) select {
-        ((toLower (typeof _x)) in KPLIB_classnamesToSave) &&        // Exclude classnames which are not in the presets
+        ((toLower (typeof _x) in KPLIB_classnamesToSave)) &&         // Exclude classnames which are not in the presets
         {alive _x} &&                                               // Exclude dead or broken objects
         {getObjectType _x >= 8} &&                                  // Exclude preplaced terrain objects
         {speed _x < 5} &&                                           // Exclude moving objects (like civilians driving through)
@@ -69,6 +69,9 @@ private ["_fobPos", "_fobObjects", "_grpUnits", "_fobMines"];
 } forEach GRLIB_all_fobs;
 
 // Save all fetched objects
+
+//hint format ["%1", _allObjects];
+
 private ["_savedPos", "_savedVecDir", "_savedVecUp", "_class", "_hasCrew"];
 {
     // Position data
@@ -85,12 +88,19 @@ private ["_savedPos", "_savedVecDir", "_savedVecUp", "_class", "_hasCrew"];
         };
     };
 
-    // Only save player side, seized or captured objects
-    // edit by storm: added 'or' check for a UAV that is on friendly side since hacked uavs wont be captured
+    // vehicle saving checks
     if (
-        ((!(_class in civilian_vehicles) || {_x getVariable ["KPLIB_seized", false]}) &&
-        (!((toLower _class) in KPLIB_o_allVeh_classes) || {_x getVariable ["KPLIB_captured", false]})) ||
-        ((unitIsUAV _x) && (side _x == GRLIB_side_friendly) )
+        //Save any vic which isn't in the civ list and isn't on enemy side (includes towed vics)
+        //'if it's an empty vehicle and vehicle is NOT in the civ vehicle list'
+        side _x != GRLIB_side_enemy && !(_class in civilian_vehicles)
+
+        //should save civ vehicles ONLY if player gets inside (prevents towing cheese)
+        //'or if it's a seized vehicle then save (defaults to false)'
+        || _x getVariable ["KPLIB_seized", false]
+
+        //should save if it's a friendly unmanned vic (this exists mostly for hacked vics)
+        //'or if it's a unmanned vehicle and it's on the player side then save'
+        || unitIsUAV _x && side _x == GRLIB_side_friendly 
     ) then {
         _objectsToSave pushBack [_class, _savedPos, _savedVecDir, _savedVecUp, _hasCrew];
     };

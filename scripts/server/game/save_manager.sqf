@@ -112,6 +112,9 @@ KPLIB_classnamesToSave append civilian_vehicles;
 // Remove duplicates
 KPLIB_classnamesToSave = KPLIB_classnamesToSave arrayIntersect KPLIB_classnamesToSave;
 
+//Storm's edit: make all classnames lower, particularly to fix civ vehicle saving bug
+KPLIB_classnamesToSave = KPLIB_classnamesToSave apply {toLower _x};
+
 /*
     --- Statistic Variables ---
 */

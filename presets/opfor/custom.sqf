@@ -39,15 +39,12 @@ Therefore, adding the same value twice or three times means they are more likely
 /* Militia infantry. Lightweight soldier classnames the game will pick from randomly as sector defenders.
 Think of them like garrison or military police forces, which are more meant to control the local population instead of fighting enemy armies. */
 militia_squad = [
-    "rhs_msv_emr_rifleman",                                             // Rifleman
-    "rhs_msv_emr_rifleman",                                             // Rifleman
     "rhs_msv_emr_LAT",                                                  // Rifleman (AT)
     "rhs_msv_emr_LAT",                                                  // Rifleman (AT)
     "rhs_msv_emr_aa",                                                   // rifleman AA
     "rhs_msv_emr_arifleman",                                            // Autorifleman
     "rhs_msv_emr_marksman",                                             // Marksman
-    "rhs_msv_emr_medic",                                                // Medic
-    "rhs_msv_emr_engineer"                                              // Engineer
+    "rhs_msv_emr_medic"                                                // Medic
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders
@@ -55,8 +52,7 @@ militia_vehicles = [
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
     "rhs_btr80a_vdv",                                                   // RHS BTR-80a
-    "O_UGV_01_rcws_F",                                                 	// ugv saif
-    "O_Heli_Light_02_dynamicLoadout_F"                                  // CSAT Kasatka
+    "O_UGV_01_rcws_F"                                                 	// ugv saif
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
@@ -66,20 +62,19 @@ opfor_vehicles = [
     "rhs_sprut_vdv",                                                 	// sprut tank destroyer
     "rhs_t90sm_tv",                                                    	// T90SM
     "rhs_btr80a_vdv",                                                   // RHS BTR-80a
-    "O_UGV_01_rcws_F",                                                 	// ugv saif
-    "O_Heli_Attack_02_dynamicLoadout_F"                                 // Mi-48 Kajman
+    "O_UGV_01_rcws_F"                                                 	// ugv saif
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
 // spawns when combat readiness below 40
+// note: patrols can pick from chopper group below, no need to add them here too
 opfor_vehicles_low_intensity = [
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
     "rhs_bmd2m",                                                        // RHS bmd2m
     "rhs_btr80a_vdv",                                                   // RHS BTR-80a
     "O_UGV_01_rcws_F",                                                 	// ugv saif
-    "O_UGV_01_rcws_F",                                                 	// ugv saif
-    "O_Heli_Attack_02_dynamicLoadout_F"                                 // Mi-48 Kajman
+    "O_UGV_01_rcws_F"                                                 	// ugv saif
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at high enemy combat readiness (aggression levels).

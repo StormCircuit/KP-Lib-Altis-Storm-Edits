@@ -282,6 +282,7 @@ KPLIB_o_allVeh_classes  = [];
 {
     KPLIB_o_allVeh_classes append _x;
 } forEach [
+    KP_liberation_guerilla_vehicles,
     militia_vehicles,
     opfor_vehicles,
     opfor_vehicles_low_intensity,

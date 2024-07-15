@@ -44,7 +44,8 @@ militia_squad = [
     "rhs_msv_emr_aa",                                                   // rifleman AA
     "rhs_msv_emr_arifleman",                                            // Autorifleman
     "rhs_msv_emr_marksman",                                             // Marksman
-    "rhs_msv_emr_medic"                                                // Medic
+    "rhs_msv_emr_medic",                                                // Medic
+    "rhs_msv_emr_at"                                                    // RPG carrier
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders

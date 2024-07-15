@@ -25,7 +25,7 @@ class Header {
 };
 
 // Name of Mission author(s) and contributors. Obviously you can only add and not (!) remove someone.
-author = "[GREUH] Zbug & McKeewa, KP Liberation Dev Team";
+author = "[GREUH] Zbug & McKeewa, KP Liberation Dev Team, StormCircuit";
 
 
 /*
@@ -37,10 +37,10 @@ briefingName = StormsEditedKPLib;
 
 // Path to image which will be displayed when the mission is highlighted on the mission selection screen.
 // Image should be .paa format and in 2:1 aspect ratio – ideally 1024x512 (Arma 3).
-overviewPicture = "res\lib.paa";
+overviewPicture = "";
 
 // Text to be displayed below the overviewPicture on the mission selection screen
-overviewText = "www.killahpotatoes.de";
+overviewText = "";
 
 
 /*
@@ -49,11 +49,11 @@ overviewText = "www.killahpotatoes.de";
 
 // String (usually mission name) shown during mission loading.
 // The string is shown in a slightly larger font above the loadScreen.
-onLoadName = $STR_MISSION_TITLE;
+onLoadName = "StormCircuits Edited KP Lib";
 
 // You can define a picture to be shown while the mission is loaded.
 // The path is relative to the mission folder.
-loadScreen = "res\lib.paa";
+loadScreen = "";
 
 // Displays a message while the mission is loading below the loadScreen picture.
 onLoadMission = "consume pant";

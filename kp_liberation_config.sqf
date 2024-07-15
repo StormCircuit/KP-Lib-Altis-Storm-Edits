@@ -190,7 +190,7 @@ KP_liberation_fuel_max = 180;
 Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profile file. */
 GRLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
 
-KP_liberation_save_interval = 10;                                       // Interval in seconds for automatic save. Default 60.
+KP_liberation_save_interval = 600;                                      // Interval in seconds for automatic save. Default 60.
 
 GRLIB_side_friendly = WEST;                                             // Friendly side.
 GRLIB_side_enemy = EAST;                                                // Enemy side.
@@ -210,11 +210,11 @@ KP_liberation_civ_supplies_impact = 20;									// The percentage increase recei
 GRLIB_recycling_percentage = 0.8;                                       // Percentage of resources you get back from recycling.
 KP_liberation_production_interval = 10;                                 	// Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
-GRLIB_sector_size = 1000;                                               // Range to activate a sector.
+GRLIB_sector_size = 1500;                                               // Range to activate a sector.
 GRLIB_capture_size = 100;                                               // Range to capture a sector.
 GRLIB_defended_buildingpos_part = 0.8;                                  // Multiplier for defenders in buildings.
 GRLIB_battlegroup_size = 20;                                            // Size of enemy battlegroups.
-GRLIB_vulnerability_timer = 600;                                      	// Time in seconds how long a captured sector is vulnerable to enemy troops.
+GRLIB_vulnerability_timer = 300;                                      	// Time in seconds how long a captured sector is vulnerable to enemy troops.
 GRLIB_radiotower_size = 2500;                                           // Radio Tower scanning range.
 GRLIB_surrender_chance = 80;                                            // Chance that enemy infantry will surrender after heavy losses are encountered.
 

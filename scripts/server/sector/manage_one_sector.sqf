@@ -40,6 +40,24 @@ active_sectors pushback _sector; publicVariable "active_sectors";
 private _opforcount = [] call KPLIB_fnc_getOpforCap;
 [_sector, _opforcount] call wait_to_spawn_sector;
 
+
+//tentative simple fix to delay friendly unit count checks, ideally this should be
+// just long enough for air vehicles to fly past
+//sleep 30;
+
+//moved from finite state machine:
+
+// Spawn resource crates
+if (_sector in sectors_factory || _sector in sectors_capture) then {
+    [_sector] call KPLIB_fnc_spawnSectorCrates;
+};
+
+// Spawn intel items
+if (_sector in sectors_military) then {
+    [_sector] call KPLIB_fnc_spawnSectorIntel;
+};
+
+
 if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call KPLIB_fnc_getSectorRange, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount) > 0)) then {
 
     if (_sector in sectors_bigtown) then {

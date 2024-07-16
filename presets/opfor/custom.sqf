@@ -81,7 +81,6 @@ opfor_vehicles_low_intensity = [
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at high enemy combat readiness (aggression levels).
 opfor_battlegroup_vehicles = [
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
-	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
     "rhs_bmd2m",                                                        // RHS bmd2m   
     "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
     "rhs_btr80a_vdv",                                                   // RHS BTR-80a
@@ -98,10 +97,10 @@ opfor_battlegroup_vehicles = [
 // below 50 readiness they spawn these 
 opfor_battlegroup_vehicles_low_intensity = [
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
-	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
     "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
     "rhs_btr80a_vdv",                                                   // RHS BTR-80a
     "rhs_sprut_vdv",                                                 	// sprut tank destroyer
+    "rhs_t90sm_tv",                                                    	// T90SM
     "O_UGV_01_rcws_F",                                                 	// ugv saif
     "O_Heli_Attack_02_dynamicLoadout_F"                                 // Mi-48 Kajman
 ];

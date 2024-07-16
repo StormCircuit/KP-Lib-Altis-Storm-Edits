@@ -21,7 +21,7 @@
 
 params [
     ["_pos", [0, 0, 0], [[]], [2, 3]],
-    ["_radius", GRLIB_sector_size, [0]]
+    ["_radius", GRLIB_capture_size, [0]]
 ];
 
 private _capCount = 3;

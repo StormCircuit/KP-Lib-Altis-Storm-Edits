@@ -191,8 +191,8 @@ KPLIB_objectInits = [
 
             //spawn a separate thread for each UGV, if its within 30 seconds of server start
             //set them to friendly side otherwise they must be on enemy side
-        	[_this, GRLIB_side_friendly, GRLIB_side_enemy] spawn {
-				params ["_obj","_sideFriendly","_sideEnemy"];
+        	[_this, GRLIB_side_friendly] spawn {
+				params ["_obj","_sideFriendly"];
                 //delete the crew of the UGV since they spawn as normal AI and do not work
                 { _obj deleteVehicleCrew _x } forEach crew _obj;
                 createVehicleCrew _obj;
@@ -201,8 +201,6 @@ KPLIB_objectInits = [
                 //otherwise they are spawned as an enemy, so set them to enemy
                 if (time < 5) then {
                     crew _obj joinSilent createGroup _sideFriendly;
-                } else {
-                    crew _obj joinSilent createGroup _sideEnemy;
                 }
 			};
 		}

@@ -335,7 +335,9 @@ _player addAction [
 ];
 
 // Reassign Zeus
-if (player == ([] call KPLIB_fnc_getCommander)) then {
+//Storm edit: this causes issues with ACE zeus wherein the commander can access zeus
+// EVEN if zeus is disabled. Adding check if zeus is enabled and if so then add reassign action
+if (player == ([] call KPLIB_fnc_getCommander) && KP_liberation_commander_zeus) then {
     _player addAction [
         ["<t color='#FF0000'>", localize "STR_REASSIGN_ZEUS", "</t>"] joinString "",
         {[] call KPLIB_fnc_requestZeus},

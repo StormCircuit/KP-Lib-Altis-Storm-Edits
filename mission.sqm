@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=6426;
+		nextID=6465;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1024;
+		nextID=1285;
 	};
 	class Camera
 	{
-		pos[]={27461.074,-182.77956,5543.3745};
-		dir[]={-0.54484153,-0.41130975,0.73073864};
-		up[]={-0.24584801,0.91150159,0.32972807};
-		aside[]={0.80169201,1.9292347e-006,0.59774715};
+		pos[]={14490.927,34.974918,5873.23};
+		dir[]={-0.0091284253,-0.89935863,0.43711638};
+		up[]={-0.018777465,0.43721166,0.89916253};
+		aside[]={0.99978197,0,0.02087873};
 	};
 };
 binarizationWanted=0;
@@ -35,6 +35,7 @@ sourceName="kp_liberation";
 addons[]=
 {
 	"A3_Ui_F",
+	"WW2_SPE_Core_c_UI_Gui_c",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Modules_F",
 	"A3_Characters_F",
@@ -69,7 +70,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=13;
+		items=14;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -79,82 +80,87 @@ class AddonsMetaData
 		};
 		class Item1
 		{
+			className="WW2_SPE_Core_c_UI_Gui_c";
+			name="WW2_SPE_Core_c_UI_Gui_c";
+		};
+		class Item2
+		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item2
+		class Item3
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item3
+		class Item4
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item4
+		class Item5
 		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item5
+		class Item6
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item7
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item8
 		{
 			className="ace_sitting";
 			name="ACE3 - Sitting";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item8
+		class Item9
 		{
 			className="A3_Structures_F_Households";
 			name="Arma 3 - Houses";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item9
+		class Item10
 		{
 			className="A3_Structures_F_Ind";
 			name="Arma 3 - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
+		class Item11
 		{
 			className="emr_main";
 			name="Enhanced Movement Rework";
 			author="Simplex Team";
 			url="https://github.com/SceptreOfficial/Enhanced-Movement-Rework";
 		};
-		class Item11
+		class Item12
 		{
 			className="ace_logistics_wirecutter";
 			name="ACE3 - Logistics Wire Cutter";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item12
+		class Item13
 		{
 			className="A3_Boat_F_Jets";
 			name="Arma 3 Jets - Boats and Submersibles";
@@ -170,7 +176,7 @@ dlcs[]=
 randomSeed=7564349;
 class ScenarioData
 {
-	author="[GREUH] Zbug, [GREUH] McKeewa, [KP] Wyqer";
+	author="[11th] StormCircuit, [GREUH] Zbug, [GREUH] McKeewa, [KP] Wyqer";
 	respawnDialog=0;
 	disabledAI=1;
 	respawn=3;
@@ -209,6 +215,7 @@ class Mission
 	{
 		briefingName="StormsEditedKPLib";
 		overviewText="@STR_MISSION_DESCRIPTION";
+		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
 		startWeather=0.40000001;
@@ -257,8 +264,8 @@ class Mission
 		class Item2
 		{
 			dataType="Trigger";
-			position[]={14492.171,7.9098182,5891.9238};
-			angle=6.1939669;
+			position[]={14492.17,7.9097791,5891.9238};
+			angle=6.1939626;
 			class Attributes
 			{
 				condition="!(player in thislist)";
@@ -681,15 +688,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14491.291,8.7843142,5887.9565};
-						angles[]={0.2229002,6.0991402,0.042640556};
+						position[]={14491.29,8.7841711,5887.957};
+						angles[]={0.22289599,6.0991402,0.042638395};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
 						rank="COLONEL";
-						init="removeallWeapons this; removebackpack this; this setVariable ['ace_medical_medicClass', 1]; this setVariable ['ACE_isEngineer', 1];";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						name="commandant";
 						description="Platoon Leader (Commander)";
 						isPlayer=1;
@@ -701,31 +708,18 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+							property="speaker";
+							expression="_this setspeaker _value;";
 							class Value
 							{
 								class data
 								{
-									singleType="BOOL";
-									value=1;
+									singleType="STRING";
+									value="Male08ENG";
 								};
 							};
 						};
 						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -738,33 +732,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=2;
 					};
 				};
 				class Item1
@@ -780,7 +748,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="removeallWeapons this; removebackpack this;";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Platoon Sergeant";
 						isPlayable=1;
 					};
@@ -789,32 +757,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -827,33 +769,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 			};
@@ -881,6 +797,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 1 Leader";
 						isPlayable=1;
 					};
@@ -889,32 +806,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -927,33 +818,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item1
@@ -968,6 +833,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 1 Medic";
 						isPlayable=1;
 					};
@@ -976,19 +842,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1001,33 +854,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=4;
+						nAttributes=1;
 					};
 				};
 				class Item2
@@ -1041,6 +868,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 1 Engineer";
 						isPlayable=1;
 					};
@@ -1049,19 +877,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1074,20 +889,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=3;
+						nAttributes=1;
 					};
 				};
 				class Item3
@@ -1102,6 +904,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 1 Team 1 Leader";
 						isPlayable=1;
 					};
@@ -1110,32 +913,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1148,33 +925,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item4
@@ -1188,6 +939,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 1 Team 1 Rifleman";
 						isPlayable=1;
 					};
@@ -1196,32 +948,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1234,33 +960,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item5
@@ -1274,6 +974,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 1 Team 1 Rifleman";
 						isPlayable=1;
 					};
@@ -1282,32 +983,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1320,33 +995,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item6
@@ -1360,6 +1009,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 1 Team 1 Rifleman";
 						isPlayable=1;
 					};
@@ -1368,32 +1018,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1406,33 +1030,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item7
@@ -1447,6 +1045,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 1 Team 2 Leader";
 						isPlayable=1;
 					};
@@ -1455,32 +1054,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1493,33 +1066,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item8
@@ -1533,6 +1080,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 1 Team 2 Rifleman";
 						isPlayable=1;
 					};
@@ -1541,32 +1089,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1579,33 +1101,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item9
@@ -1619,6 +1115,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 1 Team 2 Rifleman";
 						isPlayable=1;
 					};
@@ -1627,32 +1124,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1665,33 +1136,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item10
@@ -1705,6 +1150,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 1 Team 2 Rifleman";
 						isPlayable=1;
 					};
@@ -1713,32 +1159,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1751,33 +1171,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 			};
@@ -1805,6 +1199,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 2 Leader";
 						isPlayable=1;
 					};
@@ -1813,32 +1208,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1851,33 +1220,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item1
@@ -1892,6 +1235,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 2 Medic";
 						isPlayable=1;
 					};
@@ -1900,19 +1244,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1925,33 +1256,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=4;
+						nAttributes=1;
 					};
 				};
 				class Item2
@@ -1965,6 +1270,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 2 Engineer";
 						isPlayable=1;
 					};
@@ -1974,19 +1280,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1999,20 +1292,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=3;
+						nAttributes=1;
 					};
 				};
 				class Item3
@@ -2027,6 +1307,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 2 Team 1 Leader";
 						isPlayable=1;
 					};
@@ -2035,32 +1316,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2073,33 +1328,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item4
@@ -2113,6 +1342,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 2 Team 1 Rifleman";
 						isPlayable=1;
 					};
@@ -2121,32 +1351,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2159,33 +1363,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item5
@@ -2199,6 +1377,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 2 Team 1 Rifleman";
 						isPlayable=1;
 					};
@@ -2207,32 +1386,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2245,33 +1398,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item6
@@ -2285,6 +1412,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 2 Team 1 Rifleman";
 						isPlayable=1;
 					};
@@ -2294,32 +1422,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2332,33 +1434,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item7
@@ -2373,6 +1449,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 2 Team 2 Leader";
 						isPlayable=1;
 					};
@@ -2381,32 +1458,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2419,33 +1470,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item8
@@ -2459,6 +1484,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 2 Team 2 Rifleman";
 						isPlayable=1;
 					};
@@ -2467,32 +1493,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2505,33 +1505,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item9
@@ -2545,6 +1519,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 2 Team 2 Rifleman";
 						isPlayable=1;
 					};
@@ -2553,32 +1528,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2591,33 +1540,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item10
@@ -2631,6 +1554,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Squad 2 Team 2 Rifleman";
 						isPlayable=1;
 					};
@@ -2639,32 +1563,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2677,33 +1575,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 			};
@@ -2770,6 +1642,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="MedEvac Pilot";
 						isPlayable=1;
 					};
@@ -2778,32 +1651,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2816,33 +1663,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item1
@@ -2857,6 +1678,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="MedEvac Co-Pilot";
 						isPlayable=1;
 					};
@@ -2865,32 +1687,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2903,33 +1699,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item2
@@ -2944,6 +1714,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="MedEvac Medic";
 						isPlayable=1;
 					};
@@ -2952,19 +1723,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2977,33 +1735,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=4;
+						nAttributes=1;
 					};
 				};
 				class Item3
@@ -3018,6 +1750,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="MedEvac Medic";
 						isPlayable=1;
 					};
@@ -3026,19 +1759,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -3051,33 +1771,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=4;
+						nAttributes=1;
 					};
 				};
 			};
@@ -3105,6 +1799,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Logistics Pilot";
 						isPlayable=1;
 					};
@@ -3113,32 +1808,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -3151,33 +1820,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item1
@@ -3192,6 +1835,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Logistics Engineer";
 						isPlayable=1;
 					};
@@ -3200,19 +1844,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -3225,20 +1856,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=3;
+						nAttributes=1;
 					};
 				};
 				class Item2
@@ -3253,6 +1871,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="Logistics Demolition Expert";
 						isPlayable=1;
 					};
@@ -3261,32 +1880,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -3299,20 +1892,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=4;
+						nAttributes=1;
 					};
 				};
 			};
@@ -3340,6 +1920,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="CAS Pilot";
 						isPlayable=1;
 					};
@@ -3348,32 +1929,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -3386,33 +1941,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 				class Item1
@@ -3427,6 +1956,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="CAS Pilot";
 						isPlayable=1;
 					};
@@ -3435,32 +1965,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -3473,33 +1977,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_UAVHacker";
-							expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 			};
@@ -3527,6 +2005,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="removeallWeapons this; removebackpack this; " \n "this setUnitTrait ['Engineer', true];" \n "this setUnitTrait ['Medic', true]; " \n "this setUnitTrait ['explosiveSpecialist', true]; " \n "this setUnitTrait ['UAVHacker', true];" \n "" \n "this setVariable ['ace_medical_medicClass', 1, true]; " \n "this setVariable ['ace_isEngineer', 2, true]; " \n "";
 						description="UAV and Intelligence";
 						isPlayable=1;
 					};
@@ -3535,32 +2014,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -3573,20 +2026,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=4;
+						nAttributes=1;
 					};
 				};
 			};

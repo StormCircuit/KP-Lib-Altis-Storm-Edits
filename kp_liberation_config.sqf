@@ -206,7 +206,7 @@ GRLIB_fob_range = 200;                                                  // Build
 GRLIB_halo_altitude = 2500;                                             // Altitude in metres for the HALO jump.
 GRLIB_secondary_missions_costs = [15, 10, 8, 5];                        // Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR, Humanitarian Aid].
 GRLIB_secondary_objective_impact = 0.6;                                 // The percentage impact against enemy combat readiness for a successful FOB hunt.
-KP_liberation_civ_supplies_impact = 20;									// The percentage increase received when completing a Humanitarian Aid secondary objective
+KP_liberation_civ_supplies_impact = 30;									// The percentage increase received when completing a Humanitarian Aid secondary objective
 GRLIB_recycling_percentage = 0.8;                                       // Percentage of resources you get back from recycling.
 KP_liberation_production_interval = 10;                                 	// Time in minutes until a production process is finished, when resources multiplier is set to 1.
 

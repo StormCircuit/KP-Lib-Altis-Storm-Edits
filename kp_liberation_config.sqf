@@ -211,10 +211,10 @@ GRLIB_recycling_percentage = 0.8;                                       // Perce
 KP_liberation_production_interval = 10;                                 	// Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
 GRLIB_sector_size = 1500;                                               // Range to activate a sector.
-GRLIB_capture_size = 100;                                               // Range to capture a sector.
+GRLIB_capture_size = 400;                                               // Range to capture a sector.
 GRLIB_defended_buildingpos_part = 0.8;                                  // Multiplier for defenders in buildings.
 GRLIB_battlegroup_size = 20;                                            // Size of enemy battlegroups.
-GRLIB_vulnerability_timer = 300;                                      	// Time in seconds how long a captured sector is vulnerable to enemy troops.
+GRLIB_vulnerability_timer = 600;                                      	// Time in seconds how long a captured sector is vulnerable to enemy troops.
 GRLIB_radiotower_size = 2500;                                           // Radio Tower scanning range.
 GRLIB_surrender_chance = 80;                                            // Chance that enemy infantry will surrender after heavy losses are encountered.
 

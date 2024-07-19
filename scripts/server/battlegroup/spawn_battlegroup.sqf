@@ -75,7 +75,7 @@ if !(_spawn_marker isEqualTo "") then {
         } forEach _selected_opfor_battlegroup;
 
         //set trigger for aircraft to 30% down from 90% for more difficulty
-        if (GRLIB_csat_aggressivity > 0.2) then {
+        if (GRLIB_csat_aggressivity > 0.3) then {
             [[markerPos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective] spawn spawn_air;
             sleep 5;
             [[markerPos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective] spawn spawn_air;
@@ -87,6 +87,8 @@ if !(_spawn_marker isEqualTo "") then {
     //make AI go into aggressive state and refuse to let readiness drop below 30% once
     // a bigtown or military base is taken
     // totalWar is the flag for setting minimum readiness to 30
+    // with the logic as-is players can still hunt fobs and reduce the intensity of the next attack
+    // HOWEVER once a battlegroup spawns readiness will shoot back up to 30 minimum
     totalWar = false;
 
     {

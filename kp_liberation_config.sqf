@@ -210,7 +210,7 @@ KP_liberation_civ_supplies_impact = 20;									// The percentage increase recei
 GRLIB_recycling_percentage = 0.8;                                       // Percentage of resources you get back from recycling.
 KP_liberation_production_interval = 10;                                 	// Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
-GRLIB_sector_size = 1500;                                               // Range to activate a sector.
+GRLIB_sector_size = 3000;                                               // Range to activate a sector.
 GRLIB_capture_size = 400;                                               // Range to capture a sector.
 GRLIB_defended_buildingpos_part = 0.8;                                  // Multiplier for defenders in buildings.
 GRLIB_battlegroup_size = 20;                                            // Size of enemy battlegroups.

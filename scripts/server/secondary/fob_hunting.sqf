@@ -127,7 +127,13 @@ waitUntil {
     (_base_objectives select {alive _x}) isEqualTo []
 };
 
-combat_readiness = round (combat_readiness * GRLIB_secondary_objective_impact);
+//Storm's edit: modified fob hunt to a flat reduction in points
+// added check for if user tries to apply a decimal. Just rounds
+// also added check for negative readiness and sets to 0 if so.
+GRLIB_secondary_objective_impact = round GRLIB_secondary_objective_impact;
+combat_readiness = combat_readiness - GRLIB_secondary_objective_impact;
+if (combat_readiness < 0) then {combat_readiness = 0};
+
 stats_secondary_objectives = stats_secondary_objectives + 1;
 sleep 1;
 [] spawn KPLIB_fnc_doSave;

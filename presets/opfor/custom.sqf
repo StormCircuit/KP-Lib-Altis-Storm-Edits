@@ -7,8 +7,8 @@ opfor_officer = "rhs_msv_emr_officer";                                  // Offic
 opfor_squad_leader = "rhs_msv_emr_sergeant";                            // Squad Leader
 opfor_team_leader = "rhs_msv_emr_LAT";                                  // Rifleman (LAT)
 opfor_sentry = "rhs_msv_emr_LAT";                                       // Rifleman (LAT)
-opfor_rifleman = "rhs_msv_emr_LAT";                                     // Rifleman (LAT)
-opfor_rpg = "rhs_msv_emr_LAT";                                          // Rifleman (LAT)
+opfor_rifleman = "rhs_msv_emr_at";                                      // AT Specialist
+opfor_rpg = "rhs_msv_emr_at";                                           // AT Specialist
 opfor_grenadier = "rhs_msv_emr_grenadier";                              // Grenadier
 opfor_machinegunner = "rhs_msv_emr_arifleman";                          // Autorifleman
 opfor_heavygunner = "rhs_msv_emr_machinegunner";                        // Heavy Gunner
@@ -40,12 +40,11 @@ Therefore, adding the same value twice or three times means they are more likely
 Think of them like garrison or military police forces, which are more meant to control the local population instead of fighting enemy armies. */
 militia_squad = [
     "rhs_msv_emr_LAT",                                                  // Rifleman (AT)
-    "rhs_msv_emr_LAT",                                                  // Rifleman (AT)
     "rhs_msv_emr_aa",                                                   // rifleman AA
     "rhs_msv_emr_arifleman",                                            // Autorifleman
     "rhs_msv_emr_marksman",                                             // Marksman
     "rhs_msv_emr_medic",                                                // Medic
-    "rhs_msv_emr_at"                                                    // RPG carrier
+    "rhs_msv_emr_at"                                                    // AT Specialist
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders
@@ -73,7 +72,6 @@ opfor_vehicles_low_intensity = [
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
     "rhs_bmd2m",                                                        // RHS bmd2m
-    "rhs_btr80a_vdv",                                                   // RHS BTR-80a
     "O_UGV_01_rcws_F",                                                 	// ugv saif
     "O_UGV_01_rcws_F"                                                 	// ugv saif
 ];
@@ -83,12 +81,9 @@ opfor_battlegroup_vehicles = [
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
     "rhs_bmd2m",                                                        // RHS bmd2m   
     "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
-    "rhs_btr80a_vdv",                                                   // RHS BTR-80a
-    "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
+    "O_APC_Tracked_02_cannon_F",                                        // BTR Kamysh/Stalker
     "rhs_t90sm_tv",                                                    	// T90SM
     "O_MBT_04_command_F",                                               // T-140K Angara
-    "RHS_Mi24P_AT_vvsc",                                                // Mi-24P (AT)
-    "RHS_Mi24V_AT_vvsc",                                                // Mi-24V (AT)
     "RHS_Ka52_vvsc",                                                    // Ka-52
     "O_Heli_Attack_02_dynamicLoadout_F"                                 // Mi-48 Kajman
 ];
@@ -98,7 +93,7 @@ opfor_battlegroup_vehicles = [
 opfor_battlegroup_vehicles_low_intensity = [
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
     "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
-    "rhs_btr80a_vdv",                                                   // RHS BTR-80a
+    "rhs_bmd2m",                                                        // RHS BTR-80a
     "rhs_sprut_vdv",                                                 	// sprut tank destroyer
     "rhs_t90sm_tv",                                                    	// T90SM
     "O_UGV_01_rcws_F",                                                 	// ugv saif
@@ -112,7 +107,7 @@ opfor_troup_transports = [
     "O_Heli_Light_02_dynamicLoadout_F",                                 // CSAT Kasatka
     "O_Heli_Attack_02_dynamicLoadout_F",                                // Mi-48 Kajman
     "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
-    "rhs_btr80a_vdv"                                                   // RHS BTR-80a
+    "rhs_btr80a_vdv"                                                    // RHS BTR-80a
 ];
 
 // Enemy rotary-wings that will need to spawn in flight.

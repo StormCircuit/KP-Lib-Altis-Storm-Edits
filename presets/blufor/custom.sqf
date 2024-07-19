@@ -160,6 +160,7 @@ heavy_vehicles = [
 ];
 
 air_vehicles = [
+    ["O_Heli_Attack_02_dynamicLoadout_F",700,400,200],
     ["B_Heli_Light_01_dynamicLoadout_F",200,100,100],                   // AH-9 Pawnee
     ["RHS_MELB_MH6M",200,0,100],                                        // MH-6M Little Bird
     ["RHS_MELB_AH6M",200,200,100],                                      // AH-6M Pawnee
@@ -209,7 +210,7 @@ air_vehicles = [
 ];
 
 static_vehicles = [
-    ["RHS_TOW_TriPod_D",50,100,0],                                  	// RHS TOW by Storm
+    ["RHS_TOW_TriPod_D",0,0,0],                                  	    // RHS TOW by Storm
     ["RHS_Stinger_AA_pod_D",50,100,0],                                  // RHS Stinger pod by Storm
     ["RHS_M119_WD",100,200,0],                                          // M119A2 howitzer added by Storm
     ["B_SAM_System_03_F",250,500,0]                                     // MIM-145 Defender

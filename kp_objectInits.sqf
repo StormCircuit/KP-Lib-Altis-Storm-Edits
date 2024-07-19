@@ -209,20 +209,36 @@ KPLIB_objectInits = [
 	//Set pilot AI to fly at 800m ASL, if not using this they will attempt to maintain their height whatever they spawned at
 	//(this is not a good thing). Trying 700m. (standardAltitude, combatAltitude, stealthAltitude]). They may still have problems with SAMs
 	[
-		["O_Plane_Fighter_02_Stealth_F", "RHS_T50_vvs_blueonblue"],
+		opfor_air,
 		{
 			_this flyInHeightASL [700, 700, 700];
 		}
 	],
 
-    //set helicopters to spawn with SR Anti Air missile racks (2 each)
+    //set Kajmans to spawn with SR Anti Air missile racks (2 each)
 	[
-		opfor_choppers,
+		["O_Heli_Attack_02_dynamicLoadout_F"],
 		{
-            _this setPylonLoadout [2, "PylonRack_1Rnd_Missile_AA_03_F"];
-            _this setPylonLoadout [3, "PylonRack_1Rnd_Missile_AA_03_F"];
+            _this setPylonLoadout ["PylonLeft2", "PylonRack_1Rnd_Missile_AA_03_F", true, [-1]];
+            _this setPylonLoadout ["PylonRight2", "PylonRack_1Rnd_Missile_AA_03_F", true, [-1]];
 		}
 	],
+
+    //give one in two AT units a Titan Anti-tank stick
+    [
+        ["rhs_msv_emr_at"],
+        {
+            _this removeWeapon "rhs_weap_rpg7";
+            _this removeMagazine "rhs_rpg7_pg7vl_mag";
+            _this removeMagazine "rhs_rpg7_pg7vr_mag";
+            removeBackpack _this;
+
+            _this addBackpack "B_Carryall_oli";
+            _this addWeapon "launch_B_Titan_short_tna_F";
+            _this addMagazine "Titan_AT";
+            unitbackpack _this addMagazineCargoGlobal ["Titan_AT", 3];
+        }
+    ],
 
 	//disable FOB crate damage. I would just disable fall damage but not an easy thing to do.
 	[

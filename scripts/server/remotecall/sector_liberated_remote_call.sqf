@@ -101,6 +101,6 @@ if (GRLIB_endgame == 0) then {
         )
         && {[] call KPLIB_fnc_getOpforCap < GRLIB_battlegroup_cap}
     ) then {
-        [_liberated_sector, (random 100) < 50] spawn spawn_battlegroup;
+        [_liberated_sector, if (combat_readiness >= 30) then {false} else {true}] spawn spawn_battlegroup;
     };
 };

@@ -240,9 +240,9 @@ KPLIB_objectInits = [
         }
     ],
 
-	//disable FOB crate damage. I would just disable fall damage but not an easy thing to do.
+	//disable FOB crate and building damage. I would just disable fall damage but not an easy thing to do.
 	[
-		["B_Slingload_01_Cargo_F", "Land_Pod_Heli_Transport_04_box_F"],
+		["B_Slingload_01_Cargo_F", "Land_Pod_Heli_Transport_04_box_F", "Land_Cargo_HQ_V1_F","Land_Cargo_House_V1_F","Land_Cargo_Tower_V1_F","Land_Cargo_Patrol_V1_F"],
 		{
 			_this allowDamage false;
 		}

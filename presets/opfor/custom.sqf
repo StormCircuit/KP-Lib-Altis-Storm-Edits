@@ -5,8 +5,8 @@
 // Enemy infantry classes
 opfor_officer = "rhs_msv_emr_officer";                                  // Officer
 opfor_squad_leader = "rhs_msv_emr_sergeant";                            // Squad Leader
-opfor_team_leader = "rhs_msv_emr_LAT";                                  // Rifleman (LAT)
-opfor_sentry = "rhs_msv_emr_LAT";                                       // Rifleman (LAT)
+opfor_team_leader = "rhs_msv_emr_at";                                  // Rifleman (LAT)
+opfor_sentry = "rhs_msv_emr_aa";                                        // AT Specialist
 opfor_rifleman = "rhs_msv_emr_at";                                      // AT Specialist
 opfor_rpg = "rhs_msv_emr_at";                                           // AT Specialist
 opfor_grenadier = "rhs_msv_emr_grenadier";                              // Grenadier
@@ -39,11 +39,13 @@ Therefore, adding the same value twice or three times means they are more likely
 /* Militia infantry. Lightweight soldier classnames the game will pick from randomly as sector defenders.
 Think of them like garrison or military police forces, which are more meant to control the local population instead of fighting enemy armies. */
 militia_squad = [
-    "rhs_msv_emr_LAT",                                                  // Rifleman (AT)
+    "rhs_msv_emr_LAT",                                                  // Rifleman (LAT)
+    "rhs_msv_emr_aa",                                                   // rifleman AA
     "rhs_msv_emr_aa",                                                   // rifleman AA
     "rhs_msv_emr_arifleman",                                            // Autorifleman
     "rhs_msv_emr_marksman",                                             // Marksman
     "rhs_msv_emr_medic",                                                // Medic
+    "rhs_msv_emr_at",                                                   // AT Specialist
     "rhs_msv_emr_at"                                                    // AT Specialist
 ];
 
@@ -51,6 +53,7 @@ militia_squad = [
 militia_vehicles = [
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
+    "rhs_sprut_vdv",                                                 	// sprut tank destroyer
     "rhs_btr80a_vdv",                                                   // RHS BTR-80a
     "O_UGV_01_rcws_F"                                                 	// ugv saif
 ];
@@ -59,9 +62,8 @@ militia_vehicles = [
 // spawns when readiness above 40
 opfor_vehicles = [
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
-    "rhs_sprut_vdv",                                                 	// sprut tank destroyer
     "rhs_t90sm_tv",                                                    	// T90SM
-    "rhs_btr80a_vdv",                                                   // RHS BTR-80a
+    "O_APC_Tracked_02_cannon_F",                                        // BTR Kamysh/Stalker
     "O_UGV_01_rcws_F"                                                 	// ugv saif
 ];
 

@@ -210,10 +210,12 @@ air_vehicles = [
 ];
 
 static_vehicles = [
+    ["B_Mortar_01_F",0,0,0],                                            // Nato MK6 mortar
+    ["B_TwinMortar_RF",1000,1000,500],                                  // Reaction Forced Twin Mortar
     ["RHS_TOW_TriPod_D",0,0,0],                                  	    // RHS TOW by Storm
     ["RHS_Stinger_AA_pod_D",50,100,0],                                  // RHS Stinger pod by Storm
     ["RHS_M119_WD",100,200,0],                                          // M119A2 howitzer added by Storm
-    ["B_SAM_System_03_F",250,500,0]                                     // MIM-145 Defender
+    ["B_SAM_System_03_F",1000,1000,500]                                 // MIM-145 Defender
 ];
 
 buildings = [

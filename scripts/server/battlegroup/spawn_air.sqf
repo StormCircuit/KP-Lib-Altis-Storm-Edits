@@ -7,12 +7,13 @@ private _planes_number = ((floor linearConversion [40, 100, combat_readiness, 1,
 if (_planes_number < 1) exitWith {};
 
 private _class = selectRandom opfor_air;
+//spawn point calculations may need revision to pick the furthest from any blufor. This check may
+// be expensive and so consider leaving as is and telling players to get good
 private _spawnPoint = ([sectors_airspawn, [_first_objective], {(markerPos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy) select 0;
 private _spawnPos = [];
 private _plane = objNull;
 private _grp = createGroup [GRLIB_side_enemy, true];
 
-//todo add another plane spawn ( 2 planes in flight at once )
 
 for "_i" from 1 to _planes_number do {
     _spawnPos = markerPos _spawnPoint;

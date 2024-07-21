@@ -128,6 +128,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
         if (_iedcount > 12) then {_iedcount = 12};
     };
 
+    //spawn code for military sectors
     if (_sector in sectors_military) then {
         _squad1 = ([] call KPLIB_fnc_getSquadComp);
         _squad2 = ([] call KPLIB_fnc_getSquadComp);
@@ -140,6 +141,14 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
         };
         if ((random 100) > (66 / GRLIB_difficulty_modifier)) then {_vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);};
 
+        //spawn military defensive structures:
+        // since this field is added by Storm's version we will do a check for isNil
+        // this allows for backward compat with old presets
+        if (!isNil "opfor_military_defense") then {
+            {
+                _vehtospawn pushback _x;
+            } forEach opfor_military_defense;
+        };
         _spawncivs = false;
 
         _building_ai_max = round ((floor (18 + (round (combat_readiness / 4 )))) * _popfactor);

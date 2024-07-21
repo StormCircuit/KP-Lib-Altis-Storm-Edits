@@ -153,11 +153,10 @@ KPLIB_objectInits = [
 	
 	// Give sam sites infinite reloads with a 300 second cooldown
 	[
-		["B_SAM_System_03_F"],
+		["B_SAM_System_03_F","O_SAM_System_04_F"],
 		{
             [_this] spawn {
 				params ["_obj"];
-                _obj setVehicleRadar 1;
                 _obj addEventHandler ["Fired", { 
                     params ["_unit", "", "_muzzle", "", "", "_magazine"]; 
                     if (!local  _unit) exitWith {}; 
@@ -165,7 +164,6 @@ KPLIB_objectInits = [
                     private _ammo = _unit ammo _muzzle; 
     
                     if (_ammo == 0) then {
-                        sleep 300;
                         _unit addMagazine _magazine; 
                     };
                 }];

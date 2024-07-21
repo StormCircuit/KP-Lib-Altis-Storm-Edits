@@ -22,7 +22,6 @@ KP_liberation_guerilla_units = [
 
 // Armed vehicles
 KP_liberation_guerilla_vehicles = [
-    "rhsgref_cdf_t72ba_tv",
     "rhsgref_cdf_zsu234"
 ];
 

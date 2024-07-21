@@ -51,8 +51,9 @@ militia_squad = [
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders
 militia_vehicles = [
-    "rhs_d30_msv",                                                      // RHS AT Field gun
+    "O_SAM_System_04_F",                                                // CSAT Sam site
     "rhs_2b14_82mm_vmf",                                                // RHS Podnos
+	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
     "rhs_sprut_vdv",                                                 	// sprut tank destroyer
@@ -63,8 +64,9 @@ militia_vehicles = [
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
 // spawns when readiness above 40
 opfor_vehicles = [
+    "O_SAM_System_04_F",                                                // CSAT Sam site
     "rhs_2b14_82mm_vmf",                                                // RHS Podnos
-    "rhs_d30_msv",                                                      // RHS AT Field gun
+	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
     "rhs_t90sm_tv",                                                    	// T90SM
     "O_APC_Tracked_02_cannon_F",                                        // BTR Kamysh/Stalker
@@ -99,8 +101,7 @@ opfor_battlegroup_vehicles = [
 opfor_battlegroup_vehicles_low_intensity = [
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
     "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
-    "rhs_bmd2m",                                                        // RHS BTR-80a
-    "rhs_sprut_vdv",                                                 	// sprut tank destroyer
+    "rhs_bmd2m",                                                        // RHS bmd2m
     "rhs_t90sm_tv",                                                    	// T90SM
     "O_UGV_01_rcws_F",                                                 	// ugv saif
     "O_Heli_Attack_02_dynamicLoadout_F"                                 // Mi-48 Kajman
@@ -126,4 +127,13 @@ opfor_choppers = [
 // Enemy fixed-wings that will need to spawn in the air.
 opfor_air = [
     "O_Plane_Fighter_02_Stealth_F"                                     	// To-201 Shikra added by Storm
+];
+
+// enemy vehicles to ALWAYS spawn at a military outpost
+opfor_military_defense = [
+    "O_APC_Tracked_02_AA_F",                                            // tigris
+    "itc_land_cram_praetorian2",                                        // itc CIWS
+    "rhs_2b14_82mm_vmf",                                                // RHS Podnos
+    "O_MBT_04_command_F",                                               // T-140K Angara
+    "O_SAM_System_04_F"                                                 // CSAT Sam site
 ];

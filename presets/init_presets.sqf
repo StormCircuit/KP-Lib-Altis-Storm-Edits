@@ -276,6 +276,7 @@ KPLIB_b_allVeh_classes = [];
 {
     KPLIB_b_allVeh_classes append _x;
 } forEach [KPLIB_b_light_classes, KPLIB_b_heavy_classes, KPLIB_b_air_classes, KPLIB_b_static_classes, KPLIB_b_support_classes];
+KPLIB_b_allVeh_classes = KPLIB_b_allVeh_classes apply {toLower _x};
 
 // All opfor vehicle (land and air) classnames
 KPLIB_o_allVeh_classes  = [];
@@ -298,6 +299,11 @@ KPLIB_o_allVeh_classes = KPLIB_o_allVeh_classes arrayIntersect KPLIB_o_allVeh_cl
 // All regular opfor soldier classnames
 KPLIB_o_inf_classes = [opfor_sentry, opfor_rifleman, opfor_grenadier, opfor_squad_leader, opfor_team_leader, opfor_marksman, opfor_machinegunner, opfor_heavygunner, opfor_medic, opfor_rpg, opfor_at, opfor_aa, opfor_officer, opfor_sharpshooter, opfor_sniper,opfor_engineer];
 KPLIB_o_inf_classes = KPLIB_o_inf_classes apply {toLower _x};
+
+// All artillery in KP_liberation_suppMod_artyVeh that's also in KPLIB_b_allVeh_classes
+KP_liberation_suppMod_artyVeh = KP_liberation_suppMod_artyVeh apply {toLower _x};
+KP_liberation_suppMod_artyVeh = KP_liberation_suppMod_artyVeh arrayIntersect KPLIB_b_allVeh_classes;
+
 
 /*
     Vehicle type permission arrays

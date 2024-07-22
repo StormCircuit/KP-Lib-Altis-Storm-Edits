@@ -77,6 +77,15 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
             if ((random 100) > (33 / GRLIB_difficulty_modifier)) then {_vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);};
         };
 
+        //spawn military defensive vehicles:
+        // since this field is added by Storm's version we will do a check for isNil
+        // this allows for backward compat with old presets
+        if (!isNil "opfor_military_defense") then {
+            {
+                _vehtospawn pushback _x;
+            } forEach opfor_military_defense;
+        };
+
         _spawncivs = true;
 
         if (((random 100) <= KP_liberation_resistance_sector_chance) && (([] call KPLIB_fnc_crGetMulti) > 0)) then {

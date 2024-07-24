@@ -56,8 +56,7 @@ militia_vehicles = [
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
 	"O_APC_Tracked_02_AA_F",											// Tigris from vanilla. Far more adept at CIWS
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
-    "rhs_sprut_vdv",                                                 	// sprut tank destroyer
-    "rhs_btr80a_vdv",                                                   // RHS BTR-80a
+    "rhs_bmd2m",                                                        // RHS bmd2m
     "O_UGV_01_rcws_F"                                                 	// ugv saif
 ];
 
@@ -132,8 +131,11 @@ opfor_air = [
 // enemy vehicles to ALWAYS spawn at a military outpost
 opfor_military_defense = [
     "O_APC_Tracked_02_AA_F",                                            // tigris
-    "itc_land_cram_praetorian2",                                        // itc CIWS
+    "O_APC_Tracked_02_AA_F",                                            // tigris
+    "B_AAA_System_01_F",                                                // CIWS
+    "B_AAA_System_01_F",                                                // CIWS
     "rhs_2b14_82mm_vmf",                                                // RHS Podnos
+    "O_MBT_04_command_F",                                               // T-140K Angara
     "O_MBT_04_command_F",                                               // T-140K Angara
     "O_SAM_System_04_F"                                                 // CSAT Sam site
 ];

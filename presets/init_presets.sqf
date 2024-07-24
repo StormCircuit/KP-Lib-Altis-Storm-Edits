@@ -304,6 +304,13 @@ KPLIB_o_inf_classes = KPLIB_o_inf_classes apply {toLower _x};
 KP_liberation_suppMod_artyVeh = KP_liberation_suppMod_artyVeh apply {toLower _x};
 KP_liberation_suppMod_artyVeh = KP_liberation_suppMod_artyVeh arrayIntersect KPLIB_b_allVeh_classes;
 
+// All vehicle classes
+KPLIB_allVeh_classes = [];
+KPLIB_allVeh_classes append KPLIB_o_allVeh_classes;
+KPLIB_allVeh_classes append KPLIB_b_allVeh_classes;
+KPLIB_allVeh_classes append civilian_vehicles;
+KPLIB_allVeh_classes = KPLIB_allVeh_classes apply {toLower _x};
+
 
 /*
     Vehicle type permission arrays

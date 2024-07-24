@@ -222,7 +222,7 @@ KPLIB_objectInits = [
 		}
 	],
 
-    //give one in two AT units a Titan Anti-tank stick
+    //give AT specialists Titans, remove their RPGs
     [
         ["rhs_msv_emr_at"],
         {

@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=6465;
+		nextID=6508;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1321;
+		nextID=1330;
 	};
 	class Camera
 	{
-		pos[]={14486.943,49.079716,5872.1831};
-		dir[]={-0.0091284318,-0.89935845,0.43711671};
-		up[]={-0.018777462,0.43721202,0.89916235};
-		aside[]={0.99978197,0,0.020878728};
+		pos[]={14459.786,34.969891,6156.0176};
+		dir[]={-0.87371475,-0.17034967,0.45573223};
+		up[]={-0.15107675,0.98537886,0.078802101};
+		aside[]={0.46249607,2.9342482e-007,0.88667959};
 	};
 };
 binarizationWanted=0;
@@ -59,13 +59,16 @@ addons[]=
 	"A3_Structures_F_Ind_DieselPowerPlant",
 	"A3_Boat_F_Jets_Carrier_01",
 	"A3_Structures_F_System",
-	"A3_Structures_F_Mil_Flags"
+	"A3_Structures_F_Mil_Flags",
+	"cba_xeh",
+	"A3_Structures_F_Argo_Commercial_Billboards",
+	"A3_Props_F_Orange_Furniture"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=9;
+		items=11;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -129,11 +132,27 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item9
+		{
+			className="A3_Structures_F_Argo";
+			name="Arma 3 Malden - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item10
+		{
+			className="A3_Props_F_Orange";
+			name="Arma 3 Orange - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
 {
-	"Jets"
+	"Jets",
+	"Argo",
+	"ORANGE"
 };
 randomSeed=7564349;
 class ScenarioData
@@ -199,7 +218,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=519;
+		items=530;
 		class Item0
 		{
 			dataType="Marker";
@@ -10830,6 +10849,184 @@ class Mission
 				};
 				nAttributes=11;
 			};
+		};
+		class Item519
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12061.234,7.3963218,10502.844};
+				angles[]={0,0,0.0029700999};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=6494;
+			type="Campfire_burning_F";
+			atlOffset=5.2452087e-006;
+		};
+		class Item520
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12058.214,7.8069954,10497.666};
+				angles[]={0,0,0.0029700999};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=6495;
+			type="Campfire_burning_F";
+			atlOffset=2.998414;
+		};
+		class Item521
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12055.095,8.0924978,10492.486};
+				angles[]={0,0,0.0029700999};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=6496;
+			type="Campfire_burning_F";
+		};
+		class Item522
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12054.215,6.8171711,10506.803};
+				angles[]={0,0,0.0029700999};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=6497;
+			type="Campfire_burning_F";
+			atlOffset=5.7220459e-006;
+		};
+		class Item523
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12051.153,7.8558154,10501.505};
+				angles[]={0,0,0.0029700999};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=6498;
+			type="Campfire_burning_F";
+			atlOffset=4.2915344e-006;
+		};
+		class Item524
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12048.174,8.6060028,10496.5};
+				angles[]={0,0,0.0029700999};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=6499;
+			type="Campfire_burning_F";
+			atlOffset=2.9463511;
+		};
+		class Item525
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14451.561,31.390757,6163.1699};
+				angles[]={0,3.3137672,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=6501;
+			type="Land_Billboard_03_cheese_F";
+		};
+		class Item526
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14471.544,28.445974,6175.4736};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=6504;
+			type="Land_Sofa_01_F";
+			atlOffset=2.7364502;
+		};
+		class Item527
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14480.427,28.132961,6184.6567};
+				angles[]={0,4.6968679,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=6505;
+			type="Land_Sofa_01_F";
+			atlOffset=2.5951843;
+		};
+		class Item528
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14472.08,28.202816,6194.5337};
+				angles[]={0,3.1593397,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=6506;
+			type="Land_Sofa_01_F";
+			atlOffset=2.6679802;
+		};
+		class Item529
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14462.131,28.238802,6185.1426};
+				angles[]={0,1.5333848,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=6507;
+			type="Land_Sofa_01_F";
+			atlOffset=2.6344929;
 		};
 	};
 	class Connections

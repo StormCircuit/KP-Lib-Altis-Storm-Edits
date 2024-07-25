@@ -67,6 +67,8 @@ execVM "scripts\client\spawn\redeploy_manager.sqf";
 execVM "scripts\client\ui\ui_manager.sqf";
 execVM "scripts\client\ui\tutorial_manager.sqf";
 execVM "scripts\client\markers\update_production_sites.sqf";
+execVM "scripts\client\afk_timeout\idle_kick.sqf";
+execVM "scripts\client\afk_timeout\idle_kick_zeus.sqf";
 
 
 player addMPEventHandler ["MPKilled", {_this spawn kill_manager;}];

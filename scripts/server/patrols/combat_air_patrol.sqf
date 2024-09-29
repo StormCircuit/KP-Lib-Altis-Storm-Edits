@@ -1,7 +1,6 @@
 //Script notes:
 /*
 TODO:
--make script change number of planes according to difficulty level chosen
 -Possibly add a separate array in preset for CAP planes (CAS planes do not make sense)
 
 
@@ -9,19 +8,40 @@ TODO:
 private [ "_headless_client" ];
 _last_CAP_spawn = 0;
 _CAP_living_planes = 0;
+_CAP_planes_to_spawn = 0;
 _CAP_vehicle_array = [];
 
 waitUntil { !isNil "blufor_sectors" };
 waitUntil { !isNil "combat_readiness" };
 
+//if no units in the opfor_CAP array then exit
+if (count opfor_CAP == 0) exitWith {false};
+
+//setup the amount of planes we should spawn
+/*
+switch (GRLIB_difficulty_modifier) do {
+    case 0: {GRLIB_difficulty_modifier = 0.5;};
+    case 1: {GRLIB_difficulty_modifier = 0.75;}; 	1
+    case 2: {GRLIB_difficulty_modifier = 1;};
+    case 3: {GRLIB_difficulty_modifier = 1.25;};
+    case 4: {GRLIB_difficulty_modifier = 1.5;}; 	
+    case 5: {GRLIB_difficulty_modifier = 2;};		2
+    case 6: {GRLIB_difficulty_modifier = 4;}; 		3
+    case 7: {GRLIB_difficulty_modifier = 10;}; 		4
+*/
+
+if (GRLIB_difficulty_modifier < 1) then {_CAP_planes_to_spawn = 0};
+if (GRLIB_difficulty_modifier <= 2) then {_CAP_planes_to_spawn = 2};
+if (GRLIB_difficulty_modifier == 4) then {_CAP_planes_to_spawn = 3};
+if (GRLIB_difficulty_modifier == 10) then {_CAP_planes_to_spawn = 4};
+
 while { GRLIB_endgame == 0 } do {
 
 	//wait until all the CAP planes are dead before spawning another CAP
-	systemChat format ["%1 alive, waiting until living planes 0", _CAP_living_planes];
-	systemChat format [" array: %1", _CAP_vehicle_array];
 
 	while {_CAP_living_planes > 0} do {
-
+		// sleep to save CPU cycles
+		sleep 5;
 		//start iterating through array of CAP vehicles
 		for "_i" from 0 to (count _CAP_vehicle_array) -1 do {
 
@@ -36,26 +56,21 @@ while { GRLIB_endgame == 0 } do {
 	};
 
 	//set the next spawn time to 35 minutes plus a random amount of time between 0 and 25 minutes
-	//_next_spawn_time = _last_CAP_spawn + 2100 + random 1500;
-	_next_spawn_time = _last_CAP_spawn + 10;
-	
-	//hint format ["%1 ; %2 ; %3 : %4", time, _next_spawn_time, combat_readiness, air_weight];
-	//hint format ["%1", _last_CAP_spawn];
-	systemChat "living planes 0, waiting until check 2";
-
+	_next_spawn_time = _last_CAP_spawn + 2100 + random 1500;
+	//_next_spawn_time = _last_CAP_spawn + 10;
 
 	//wait 35 minutes + a random amount up to +25 minutes since last spawn AND 40 air kills 
 	// AND 20 minutes has passed since AND combat readiness is >50
 	waitUntil {
+		sleep 1;
 		time > _next_spawn_time && 
 		air_weight >= 40 &&
-		combat_readiness >= 50
+		combat_readiness >= 50;
 	};
 
 	//set last spawn time equal to time, all checks have passed and so plane spawn should commence
 	_last_CAP_spawn = time;
 
-	systemChat "here they come!!!";
 
 	//prepare spawnpoint in variables for readability
 
@@ -63,7 +78,7 @@ while { GRLIB_endgame == 0 } do {
 	private _objective = [] call KPLIB_fnc_getNearestBluforObjective;
 
 	//select one class of plane to spawn randomly
-	private _class = selectRandom opfor_air;
+	private _class = selectRandom opfor_CAP;
 
 	//get the airspawn sector spawn point
 	//We sort by ASCEND to get furthest marker
@@ -81,9 +96,11 @@ while { GRLIB_endgame == 0 } do {
 	//create 2 planes and their crews, give them the killed handlers + apply init from kp object init
 	// _plane refers to the vehicle instance its self
 
-	//TO DO: refactor to add each plane to an array then run a check on each if alive and if not
-	// decrement the number of alive planes
-	for "_i" from 1 to 2 do {
+	//spawn planes depending on difficulty. See top of this script for how _CAP_planes_to_spawn
+	// is calculated
+	for "_i" from 1 to _CAP_planes_to_spawn do {
+
+		//create the plane and its occupants
 		_plane = createVehicle [_class, _spawnPos, [], 0, "FLY"];
 		createVehicleCrew _plane;
 		_plane flyInHeight (120 + (random 180));

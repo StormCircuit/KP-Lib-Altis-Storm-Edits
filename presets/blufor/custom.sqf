@@ -50,9 +50,9 @@ KP_liberation_fuel_crate = "CargoNet_01_barrels_F";                     // This 
     IMPORTANT: The last element inside each array must have no comma at the end!
 */
 infantry_units = [
-    ["rhsusf_army_ocp_riflemanl",15,0,0],                               // Rifleman (Light)
+    ["rhsusf_army_ocp_riflemanl",1,0,0],                                // Rifleman (Light)
+    ["rhsusf_army_ocp_riflemanat",5,0,0],                               // Rifleman (AT)
     ["rhsusf_army_ocp_rifleman",20,0,0],                                // Rifleman
-    ["rhsusf_army_ocp_riflemanat",30,0,0],                              // Rifleman (AT)
     ["rhsusf_army_ocp_grenadier",25,0,0],                               // Grenadier
     ["rhsusf_army_ocp_autorifleman",25,0,0],                            // Autorifleman
     ["rhsusf_army_ocp_machinegunner",35,0,0],                           // Heavygunner

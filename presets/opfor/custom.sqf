@@ -128,6 +128,10 @@ opfor_air = [
     "O_Plane_Fighter_02_Stealth_F"                                     	// To-201 Shikra added by Storm
 ];
 
+opfor_CAP = [
+    "O_Plane_Fighter_02_Stealth_F"                                     	// To-201 Shikra added by Storm
+];
+
 // enemy vehicles to ALWAYS spawn at a military outpost
 opfor_military_defense = [
     "O_APC_Tracked_02_AA_F",                                            // tigris

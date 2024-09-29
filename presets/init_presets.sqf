@@ -191,6 +191,8 @@ opfor_battlegroup_vehicles_low_intensity    = opfor_battlegroup_vehicles_low_int
 opfor_troup_transports                      = opfor_troup_transports                    select {[_x] call KPLIB_fnc_checkClass};
 opfor_choppers                              = opfor_choppers                            select {[_x] call KPLIB_fnc_checkClass};
 opfor_air                                   = opfor_air                                 select {[_x] call KPLIB_fnc_checkClass};
+opfor_CAP                                   = opfor_CAP                                 select {[_x] call KPLIB_fnc_checkClass};
+opfor_military_defense                      = opfor_military_defense                    select {[_x] call KPLIB_fnc_checkClass};
 
 // Resistance
 KP_liberation_guerilla_units                = KP_liberation_guerilla_units              select {[_x] call KPLIB_fnc_checkClass};
@@ -258,6 +260,7 @@ KPLIB_allLandVeh_classes = [[], [huron_typename]] select (huron_typename isKindO
     opfor_vehicles_low_intensity apply {toLower _x},
     opfor_battlegroup_vehicles apply {toLower _x},
     opfor_battlegroup_vehicles_low_intensity apply {toLower _x},
+    opfor_military_defense apply {toLower _x},
     opfor_troup_transports apply {toLower _x},
     KPLIB_b_light_classes,
     KPLIB_b_heavy_classes,
@@ -269,7 +272,7 @@ KPLIB_allLandVeh_classes = KPLIB_allLandVeh_classes arrayIntersect KPLIB_allLand
 KPLIB_allAirVeh_classes = [[], [huron_typename]] select (huron_typename isKindOf "Air");
 {
     KPLIB_allAirVeh_classes append _x;
-} forEach [opfor_choppers apply {toLower _x}, opfor_air apply {toLower _x}, KPLIB_b_air_classes, KPLIB_b_support_classes select {_x isKindOf "Air"}];
+} forEach [opfor_choppers apply {toLower _x}, opfor_air apply {toLower _x}, opfor_CAP apply {toLower _x}, KPLIB_b_air_classes, KPLIB_b_support_classes select {_x isKindOf "Air"}];
 
 // All blufor vehicle (land and air) classnames
 KPLIB_b_allVeh_classes = [];

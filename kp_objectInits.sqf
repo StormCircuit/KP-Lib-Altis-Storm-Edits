@@ -213,6 +213,14 @@ KPLIB_objectInits = [
 		}
 	],
 
+    //set the CAP to come in low so they avoid SAM sites
+    [
+		opfor_CAP,
+		{
+			_this flyInHeightASL [200, 200, 200];
+		}
+	],
+
     //set Kajmans to spawn with SR Anti Air missile racks (2 each)
 	[
 		["O_Heli_Attack_02_dynamicLoadout_F"],

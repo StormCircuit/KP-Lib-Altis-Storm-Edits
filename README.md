@@ -1,4 +1,7 @@
-![KP Liberation](https://www.killahpotatoes.de/images/arma/liberation.png)
+## I am deferring to PiG's Lib because he actively supports his build: https://github.com/PiG13BR/KP-Liberation-PIG
+Please do not submit issues here!
+
+Original KP Lib credit: https://github.com/KillahPotatoes/KP-Liberation
 
 # KP Liberation for Arma 3 with edits by StormCircuit
 
